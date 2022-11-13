@@ -105,13 +105,11 @@
                           $db = config::getConnexion();
                           $query = $db->prepare(
                             'UPDATE post SET                     
-                              nom = :nom, 
                               titre = :titre, 
                                           contenu = :contenu, 
                                           image= :image  	
                             WHERE id = :id '
                           );
-                          $query->bindValue('nom' , $post->getnom()) ;
                           $query->bindValue('titre' , $post->gettitre());
                           $query->bindValue('contenu' , $post->getcontenu());
                           $query->bindValue('image' , $post->getimage());

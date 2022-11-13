@@ -43,17 +43,14 @@ $listePost=$PostC->afficherpost();
 								<h2><a href="blog_single.php"><?php echo $Post['titre'];?></a></h2>
 								<p><?php echo $Post['contenu'];?> </p>
 							</div>
-						
+							<div class="more"> <?php echo "<a  href=PostUpdate.php?id=" .$Post['id'].">";   ?>  modifier</a></div>
+
 							<form method="POST" action="DeletePost.php">
                                     <input type="submit" name="supprimer" value="supprimer">
 	                                <input type="hidden" value="<?PHP echo $Post['id']; ?>" name="id">
 									</form>
 							<div class="actions">
-								<div>
-									
-									<div class="more"> <?php echo "<a href=blog_single.php?idblog=" .$Post['id'].">"; ?> Leave a comment</a></div>
-									
-								</div>
+								
 								
 							</div>
 						</div>
